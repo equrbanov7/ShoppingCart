@@ -7,7 +7,7 @@ type StoreItemProps = {
   name: string;
   price: number;
   imgUrl: string;
-};
+} ;
 
 const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
   const {
