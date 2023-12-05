@@ -36,11 +36,18 @@ const CardItem = ({ id, quantity }: CardItemProps) => {
           {item?.price && formatCurrency(item?.price)}
         </div>
       </div>
-      <div>{formatCurrency(item?.price * quantity)} </div>
+      <div>{ item?.price&& formatCurrency(item?.price * quantity)} </div>
       <Button
         variant="outline-danger"
         size="sm"
-        onClick={() => removeFromCart(item?.id)}
+        onClick={() =>{
+          if(item?.id){
+            removeFromCart(item?.id)
+          }
+         
+        }
+         
+          }
       >
         &times;
       </Button>
